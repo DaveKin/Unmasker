@@ -1,0 +1,8 @@
+AddHandler php-stable .php
+
+
+
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !^(.+)\.php$
+RewriteRule ^([^/]+)$ /?user=$1 [NC]

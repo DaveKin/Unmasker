@@ -11,11 +11,11 @@ class unmasker{
   
 public function __construct(){
   global $con, $db_selected, $twitterup;
-  $con = mysql_connect("internal-db.s53401.gridserver.com","db53401","ykOsJhav");
+  $con = mysql_connect("server","user","password");
   if (!$con){
     die('Could not connect: ' . mysql_error());
   }
-  $db_selected = mysql_select_db("db53401_unmasker", $con);
+  $db_selected = mysql_select_db("database", $con);
   if (!$db_selected){
     die ("Can\'t use unmasker database : " . mysql_error());
   }
@@ -308,7 +308,7 @@ function get_tiny_url($url)
     curl_setopt($ch, CURLOPT_HTTPHEADER, array('Expect:'));
     if($auth)
     {
-        curl_setopt($ch, CURLOPT_USERPWD, "unmasker:numberwang");
+        curl_setopt($ch, CURLOPT_USERPWD, "user:password");
     }
     if('POST' == ($method = strtoupper($method)))
     {

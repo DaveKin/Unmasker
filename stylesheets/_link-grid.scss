@@ -1,0 +1,26 @@
+// Link grid style (currently used on new sell page and selling rate cards
+
+.link-grid {
+  &:after {
+    content: "";
+    clear:both;
+    display:block;
+  }
+
+  a {
+    transition: border-color 0.5s linear;
+    display: block;
+    float:left;
+    background: #ddd;
+    border-bottom: 5px solid #ddd;
+    text-align: center;
+    padding:22px 5px 17px;
+    margin:0.2%;
+    width:24.6%;
+
+    &:hover {
+      border-bottom: 5px solid #ddf;
+      text-decoration: none;
+    }
+  }
+}
